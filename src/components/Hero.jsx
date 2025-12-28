@@ -31,7 +31,7 @@ export default function Hero() {
           <img
             src={photoUrl}
             alt="Profile"
-            className="h-auto w-[70%] mx-auto object-cover rounded-2xl ring-1 ring-sky-200 shadow hover:shadow-xl hover:scale-[1.02] transition"
+            className="h-auto w-[70%] max-w-full mx-auto object-cover rounded-2xl ring-1 ring-sky-200 shadow hover:shadow-xl hover:scale-[1.02] transition"
           />
         ) : (
           <div className="h-56 rounded-2xl bg-gradient-to-br from-sky-100 to-emerald-100 shadow-inner" />
