@@ -13,9 +13,9 @@ export default function App() {
     location.hash = '#hero'
   }, [])
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 w-full">
         <section id="hero" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
           <Hero />
         </section>
