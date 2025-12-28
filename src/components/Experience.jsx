@@ -61,6 +61,16 @@ export default function Experience() {
                 <li key={p} className="text-sm text-gray-700">• {p}</li>
               ))}
             </ul>
+            <div className="mt-5">
+              <a
+                href="https://drive.google.com/file/d/1Iv_CpbHUy60jgipBQpqRvOCimkN4TYtI/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex px-3 py-1.5 rounded-full bg-sky-600 text-white text-sm hover:bg-sky-700"
+              >
+                View Internship Certificate
+              </a>
+            </div>
           </div>
           </Reveal>
         ))}

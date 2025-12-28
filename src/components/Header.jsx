@@ -16,13 +16,13 @@ export default function Header() {
           type="button"
           aria-label="Toggle menu"
           aria-expanded={open ? 'true' : 'false'}
-          className="md:hidden p-2 rounded-full hover:bg-sky-50 text-gray-700 transition"
+          className="md:hidden p-2 rounded-full hover:bg-sky-50 text-gray-700 transition flex items-center justify-center"
           onClick={() => setOpen(v => !v)}
         >
           <span className="relative inline-block w-6 h-6">
-            <span className={`${open ? 'opacity-0' : 'opacity-100'} absolute left-0 top-[3px] block w-6 h-[2px] bg-gray-700 transition-opacity`}></span>
-            <span className={`${open ? 'rotate-45 top-[8px]' : 'top-[8px]'} absolute left-0 block w-6 h-[2px] bg-gray-700 transition-transform`}></span>
-            <span className={`${open ? '-rotate-45 top-[8px]' : 'top-[13px]'} absolute left-0 block w-6 h-[2px] bg-gray-700 transition-transform`}></span>
+            <span className={`${open ? 'opacity-0' : 'opacity-100'} absolute left-0 top-[4px] block w-6 h-[3px] bg-sky-700 transition-opacity`}></span>
+            <span className={`${open ? 'rotate-45 top-[9px]' : 'top-[9px]'} absolute left-0 block w-6 h-[3px] bg-sky-700 transition-transform`}></span>
+            <span className={`${open ? '-rotate-45 top-[9px]' : 'top-[14px]'} absolute left-0 block w-6 h-[3px] bg-sky-700 transition-transform`}></span>
           </span>
         </button>
         <nav className="hidden md:flex items-center gap-2">
