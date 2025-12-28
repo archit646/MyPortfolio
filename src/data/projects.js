@@ -6,7 +6,7 @@ export const projects = [
       'Full-stack blog with authentication, posts, comments, search, and filters.',
     tech: ['Django', 'DRF', 'React', 'Tailwind'],
     liveUrl: import.meta.env.VITE_BLOG_LIVE_URL || 'https://archit-blog.netlify.app/',
-    githubUrl: import.meta.env.VITE_BLOG_REPO_URL || '',
+    githubUrl: import.meta.env.VITE_BLOG_REPO_URL || 'https://github.com/archit646/Blog-Full-Stack-',
   },
   {
     id: 'chat',
@@ -15,14 +15,14 @@ export const projects = [
       'Channels + WebSockets chat app with rooms, live messaging, and history.',
     tech: ['Django Channels', 'WebSockets', 'React'],
     liveUrl: import.meta.env.VITE_CHAT_LIVE_URL || 'https://chat010.netlify.app/',
-    githubUrl: import.meta.env.VITE_CHAT_REPO_URL || '',
+    githubUrl: import.meta.env.VITE_CHAT_REPO_URL || 'https://github.com/archit646/Chat_App',
   },
   {
     id: 'resume',
     title: 'AI Resume Analyzer',
     description: 'Resume upload and AI-based analysis powered by Gemini LLM.',
     tech: ['DRF', 'React', 'Gemini LLM'],
-    liveUrl: import.meta.env.VITE_RESUME_LIVE_URL || '',
-    githubUrl: import.meta.env.VITE_RESUME_REPO_URL || '',
+    liveUrl: import.meta.env.VITE_RESUME_LIVE_URL || 'https://resumeanalyzer010.netlify.app',
+    githubUrl: import.meta.env.VITE_RESUME_REPO_URL || 'https://github.com/archit646/Resume_Analyzer',
   },
 ]

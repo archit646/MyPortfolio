@@ -1,15 +1,27 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 
 export default function Header() {
   const avatarUrl = import.meta.env.VITE_AVATAR_URL || ''
   const [open, setOpen] = useState(false)
+  const [showAvatar, setShowAvatar] = useState(false)
+  const avatarSrc = avatarUrl || 'archit-photo.jpg'
+  const params = new URLSearchParams(window.location.search)
+  const paramPhoto = params.get('photo') || ''
+  const modalPhotoSrc = paramPhoto || import.meta.env.VITE_HERO_PHOTO_URL || avatarSrc
   return (
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur border-b shadow-sm">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2 no-underline focus:outline-none focus-visible:outline-none">
-          
-            <img src='archit-photo.jpg' alt="Avatar" className="h-9 w-9 rounded-full object-cover ring-2 ring-sky-200 hover:ring-sky-300 transition" />
-          
+            <img
+              src={avatarSrc}
+              alt="Avatar"
+              className="h-9 w-9 rounded-full object-cover ring-2 ring-sky-200 hover:ring-sky-300 transition cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault()
+                setShowAvatar(true)
+              }}
+            />
           <span className="text-base font-semibold">Archit Kumar</span>
         </a>
         <button
@@ -46,6 +58,19 @@ export default function Header() {
           </div>
         </div>
       )}
+      {showAvatar &&
+        createPortal(
+          <div className="fixed inset-0 z-[999] bg-black/60 backdrop-blur-2xl flex items-center justify-center" onClick={() => setShowAvatar(false)}>
+            <img
+              src={modalPhotoSrc}
+              alt="Profile"
+              className="max-w-[92vw] max-h-[88vh] object-contain rounded-2xl ring-1 ring-sky-200 shadow-2xl hover:shadow-[0_8px_40px_rgb(56,189,248,0.35)] transition"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>,
+          document.body
+        )
+      }
     </header>
   )
 }

@@ -29,12 +29,20 @@ function Reveal({ children, delay = 0 }) {
 export default function Skills() {
   const blocks = [
     {
-      title: 'Frontend',
-      items: ['HTML', 'CSS', 'JavaScript', 'React', 'Vite', 'Tailwind CSS'],
+      title: 'Programming Languages',
+      items: ['Python', 'JavaScript'],
     },
     {
-      title: 'Backend',
-      items: ['Python', 'Django', 'Django REST Framework', 'MySQL'],
+      title: 'Web Frameworks',
+      items: ['React', 'Tailwind CSS', 'Django', 'Django REST Framework'],
+    },
+    {
+      title: 'Databases',
+      items: ['MySQL'],
+    },
+    {
+      title: 'Data Analysis',
+      items: ['NumPy', 'Pandas', 'MS Excel'],
     },
     {
       title: 'Real-Time',
@@ -42,11 +50,11 @@ export default function Skills() {
     },
     {
       title: 'AI / LLM',
-      items: ['Gemini', 'Prompt Engineering'],
+      items: ['Gemini', 'Prompt Engineering', 'Agentic AI'],
     },
     {
       title: 'Tools & Deployment',
-      items: ['GitHub', 'Netlify', 'Render', 'Vercel'],
+      items: ['Git', 'GitHub', 'Postman', 'Netlify', 'Render', 'Vercel'],
     },
   ]
 
@@ -58,9 +66,9 @@ export default function Skills() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blocks.map((b, i) => (
           <Reveal key={b.title} delay={i * 120}>
-          <div className="bg-white backdrop-blur-sm border border-sky-100 rounded-2xl p-6 shadow-sm hover:shadow-md hover:border-sky-300 hover:ring-1 hover:ring-sky-200 transition text-gray-900">
+          <div className="bg-white backdrop-blur-sm border border-sky-100 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-sky-300 hover:ring-1 hover:ring-sky-200 transition text-gray-900">
             <h3 className="text-lg font-semibold text-gray-900">{b.title}</h3>
-            <ul className="mt-4 flex flex-wrap gap-2">
+            <ul className="mt-3 flex flex-wrap gap-2">
               {b.items.map((i) => (
                 <li key={i} className="text-sm text-sky-800 bg-sky-50 px-3 py-1 rounded-full">{i}</li>
               ))}
